@@ -8,17 +8,13 @@ int main() {
     setlocale(LC_ALL, "ru_RU");
     int number, twoN;
 
-    double sign, epsilon, x, strictSum, sum, summand, difference;
+    double sign, epsilon, strictSum, sum, summand, difference;
     sign = 0;
 
     cout << "Enter epsilon" << endl;
     cin >> epsilon;
 
-    cout << "Enter X" << endl;
-    cin >> x;
-
     cout << "Epsilon is: " << epsilon << endl;
-    cout << "X is: " << x << endl;
 
     if(epsilon <= 0)
     {
