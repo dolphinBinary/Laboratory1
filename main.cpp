@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    const double PI = acos(-1);
+    const double PI = M_PI;
     setlocale(LC_ALL, "ru_RU");
     int number, twoN;
 
@@ -34,7 +34,7 @@ int main() {
             // Формирование слагаемого
             sign = -sign;
             twoN = (2 * number - 1);
-            summand = sign / twoN / twoN / twoN;
+            summand = (double)sign / (twoN * twoN * twoN);
             // добавить слагаемое к сумме
             sum += summand;
             difference = fabs(strictSum - sum);
