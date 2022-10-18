@@ -28,7 +28,7 @@ int main() {
     else
     {
         number = 0;
-        strictSum = PI * PI * PI;
+        strictSum = (PI * PI * PI) / 32;
         sign = -1;
         sum = 0;
         difference = fabs(strictSum - sum);
