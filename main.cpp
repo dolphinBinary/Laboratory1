@@ -4,11 +4,12 @@
 using namespace std;
 
 int main() {
+    const double PI = acos(-1);
     setlocale(LC_ALL, "ru_RU");
-    int number, twoNFactorial;
-    int sign = 0;
+    int number, twoN;
 
-    double epsilon, x, strictSum, argumentX, sum, summand, difference;
+    double sign, epsilon, x, strictSum, sum, summand, difference;
+    sign = 0;
 
     cout << "Enter epsilon" << endl;
     cin >> epsilon;
@@ -27,20 +28,17 @@ int main() {
     else
     {
         number = 0;
-        strictSum = cos(x);
-        sign += 1;
-        twoNFactorial = 1;
-        argumentX = 1;
+        strictSum = PI * PI * PI;
+        sign = -1;
         sum = 0;
         difference = fabs(strictSum - sum);
         while(difference > epsilon)
         {
             number += 1;
             // Формирование слагаемого
-            sign -= sign;
-            argumentX = argumentX * x * x;
-            twoNFactorial = twoNFactorial * (2 * number - 1) * (2 * number);
-            summand = sign * argumentX / twoNFactorial;
+            sign = -sign;
+            twoN = (2 * number - 1);
+            summand = sign / twoN / twoN / twoN;
             // добавить слагаемое к сумме
             sum += summand;
             difference = fabs(strictSum - sum);
